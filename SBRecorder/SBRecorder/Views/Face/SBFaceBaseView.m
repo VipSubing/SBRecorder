@@ -39,58 +39,58 @@
 }
 
 - (void)drawRectangle:(NSArray *)faces context:(CGContextRef)context{
-    if (faces.count == 1) {
-        for (NSDictionary *dicPerson in faces) {
-            if ([dicPerson objectForKey:kFacePointsKey]) {
-                int index = 0;
-                for (NSString *strPoints in [dicPerson objectForKey:kFacePointsKey]) {
-                    CGPoint p = CGPointFromString(strPoints) ;
-//                    CGContextAddEllipseInRect(context, CGRectMake(p.x - 1 , p.y - 1 , 2 , 2));
-                    [[NSString stringWithFormat:@"%d",index] drawAtPoint:p withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:7],NSForegroundColorAttributeName:[UIColor redColor]}];
-                    index ++;
-                }
-            }
-            
-            BOOL isOriRect=NO;
-            if ([dicPerson objectForKey:kFaceRectKey]) {
-                isOriRect=[[dicPerson objectForKey:kFaceRectKey] boolValue];
-            }
-            
-            if ([dicPerson objectForKey:kFaceRectKey]) {
-                
-                CGRect rect = CGRectFromString([dicPerson objectForKey:kFaceRectKey]);
-                
-                if(isOriRect){//完整矩形
-                    CGContextAddRect(context,rect) ;
-                }
-                else{ //只画四角
-                    // 左上
-                    CGContextMoveToPoint(context, rect.origin.x, rect.origin.y+rect.size.height/8);
-                    CGContextAddLineToPoint(context, rect.origin.x, rect.origin.y);
-                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width/8, rect.origin.y);
-                    
-                    //右上
-                    CGContextMoveToPoint(context, rect.origin.x+rect.size.width*7/8, rect.origin.y);
-                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y);
-                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y+rect.size.height/8);
-                    
-                    //左下
-                    CGContextMoveToPoint(context, rect.origin.x, rect.origin.y+rect.size.height*7/8);
-                    CGContextAddLineToPoint(context, rect.origin.x, rect.origin.y+rect.size.height);
-                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width/8, rect.origin.y+rect.size.height);
-                    
-                    
-                    //右下
-                    CGContextMoveToPoint(context, rect.origin.x+rect.size.width*7/8, rect.origin.y+rect.size.height);
-                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y+rect.size.height);
-                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y+rect.size.height*7/8);
-                }
-            }
-        }
-        [self.tintColor set];
-        CGContextSetLineWidth(context, 2);
-        CGContextStrokePath(context);
-    }
+//    if (faces.count == 1) {
+//        for (NSDictionary *dicPerson in faces) {
+//            if ([dicPerson objectForKey:kFacePointsKey]) {
+//                int index = 0;
+//                for (NSString *strPoints in [dicPerson objectForKey:kFacePointsKey]) {
+//                    CGPoint p = CGPointFromString(strPoints) ;
+////                    CGContextAddEllipseInRect(context, CGRectMake(p.x - 1 , p.y - 1 , 2 , 2));
+//                    [[NSString stringWithFormat:@"%d",index] drawAtPoint:p withAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:7],NSForegroundColorAttributeName:[UIColor redColor]}];
+//                    index ++;
+//                }
+//            }
+//
+//            BOOL isOriRect=NO;
+//            if ([dicPerson objectForKey:kFaceRectKey]) {
+//                isOriRect=[[dicPerson objectForKey:kFaceRectKey] boolValue];
+//            }
+//
+//            if ([dicPerson objectForKey:kFaceRectKey]) {
+//
+//                CGRect rect = CGRectFromString([dicPerson objectForKey:kFaceRectKey]);
+//
+//                if(isOriRect){//完整矩形
+//                    CGContextAddRect(context,rect) ;
+//                }
+//                else{ //只画四角
+//                    // 左上
+//                    CGContextMoveToPoint(context, rect.origin.x, rect.origin.y+rect.size.height/8);
+//                    CGContextAddLineToPoint(context, rect.origin.x, rect.origin.y);
+//                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width/8, rect.origin.y);
+//
+//                    //右上
+//                    CGContextMoveToPoint(context, rect.origin.x+rect.size.width*7/8, rect.origin.y);
+//                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y);
+//                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y+rect.size.height/8);
+//
+//                    //左下
+//                    CGContextMoveToPoint(context, rect.origin.x, rect.origin.y+rect.size.height*7/8);
+//                    CGContextAddLineToPoint(context, rect.origin.x, rect.origin.y+rect.size.height);
+//                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width/8, rect.origin.y+rect.size.height);
+//
+//
+//                    //右下
+//                    CGContextMoveToPoint(context, rect.origin.x+rect.size.width*7/8, rect.origin.y+rect.size.height);
+//                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y+rect.size.height);
+//                    CGContextAddLineToPoint(context, rect.origin.x+rect.size.width, rect.origin.y+rect.size.height*7/8);
+//                }
+//            }
+//        }
+//        [self.tintColor set];
+//        CGContextSetLineWidth(context, 2);
+//        CGContextStrokePath(context);
+//    }
 }
 
 

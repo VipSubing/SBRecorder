@@ -15,6 +15,11 @@
 		173ED7AC2042B3D500D5B7CE /* SBFaceCatGlassesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 173ED7AB2042B3D500D5B7CE /* SBFaceCatGlassesView.m */; };
 		173ED7AF2042B68100D5B7CE /* SBFaceBlindfoldView.m in Sources */ = {isa = PBXBuildFile; fileRef = 173ED7AE2042B68100D5B7CE /* SBFaceBlindfoldView.m */; };
 		173ED7B22043AD7100D5B7CE /* GPUImageSBBlendFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 173ED7B12043AD7100D5B7CE /* GPUImageSBBlendFilter.m */; };
+		173ED7BA2043FA3B00D5B7CE /* IMG_0376.png in Resources */ = {isa = PBXBuildFile; fileRef = 173ED7B52043FA3B00D5B7CE /* IMG_0376.png */; };
+		173ED7BB2043FA3B00D5B7CE /* IMG_0377.png in Resources */ = {isa = PBXBuildFile; fileRef = 173ED7B62043FA3B00D5B7CE /* IMG_0377.png */; };
+		173ED7BC2043FA3B00D5B7CE /* IMG_0375.png in Resources */ = {isa = PBXBuildFile; fileRef = 173ED7B72043FA3B00D5B7CE /* IMG_0375.png */; };
+		173ED7BD2043FA3B00D5B7CE /* IMG_0379.png in Resources */ = {isa = PBXBuildFile; fileRef = 173ED7B82043FA3B00D5B7CE /* IMG_0379.png */; };
+		173ED7BE2043FA3B00D5B7CE /* IMG_0378.png in Resources */ = {isa = PBXBuildFile; fileRef = 173ED7B92043FA3B00D5B7CE /* IMG_0378.png */; };
 		1749A5B0202860D200B8FCC6 /* SBFaceBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1749A5AF202860D200B8FCC6 /* SBFaceBaseView.m */; };
 		1749A5B42029530C00B8FCC6 /* SBFaceJiangGuanView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1749A5B32029530C00B8FCC6 /* SBFaceJiangGuanView.m */; };
 		17BCE7EE201AD8CE0083F5EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BCE7ED201AD8CE0083F5EC /* AppDelegate.m */; };
@@ -201,6 +206,11 @@
 		173ED7AE2042B68100D5B7CE /* SBFaceBlindfoldView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBFaceBlindfoldView.m; sourceTree = "<group>"; };
 		173ED7B02043AD7100D5B7CE /* GPUImageSBBlendFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GPUImageSBBlendFilter.h; sourceTree = "<group>"; };
 		173ED7B12043AD7100D5B7CE /* GPUImageSBBlendFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GPUImageSBBlendFilter.m; sourceTree = "<group>"; };
+		173ED7B52043FA3B00D5B7CE /* IMG_0376.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0376.png; sourceTree = "<group>"; };
+		173ED7B62043FA3B00D5B7CE /* IMG_0377.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0377.png; sourceTree = "<group>"; };
+		173ED7B72043FA3B00D5B7CE /* IMG_0375.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0375.png; sourceTree = "<group>"; };
+		173ED7B82043FA3B00D5B7CE /* IMG_0379.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0379.png; sourceTree = "<group>"; };
+		173ED7B92043FA3B00D5B7CE /* IMG_0378.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0378.png; sourceTree = "<group>"; };
 		1749A5AE202860D200B8FCC6 /* SBFaceBaseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SBFaceBaseView.h; sourceTree = "<group>"; };
 		1749A5AF202860D200B8FCC6 /* SBFaceBaseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SBFaceBaseView.m; sourceTree = "<group>"; };
 		1749A5B1202951E100B8FCC6 /* SBRecordButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBRecordButton.h; sourceTree = "<group>"; };
@@ -482,6 +492,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		173ED7B42043FA3B00D5B7CE /* Cover */ = {
+			isa = PBXGroup;
+			children = (
+				173ED7B52043FA3B00D5B7CE /* IMG_0376.png */,
+				173ED7B62043FA3B00D5B7CE /* IMG_0377.png */,
+				173ED7B72043FA3B00D5B7CE /* IMG_0375.png */,
+				173ED7B82043FA3B00D5B7CE /* IMG_0379.png */,
+				173ED7B92043FA3B00D5B7CE /* IMG_0378.png */,
+			);
+			path = Cover;
+			sourceTree = "<group>";
+		};
 		1749A5AD20285EF500B8FCC6 /* Face */ = {
 			isa = PBXGroup;
 			children = (
@@ -531,6 +553,7 @@
 		17BCE7EB201AD8CE0083F5EC /* SBRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				173ED7B42043FA3B00D5B7CE /* Cover */,
 				17BCE81E201AD97D0083F5EC /* SBRecorder */,
 				17BCE7EC201AD8CE0083F5EC /* AppDelegate.h */,
 				17BCE7ED201AD8CE0083F5EC /* AppDelegate.m */,
@@ -1018,6 +1041,8 @@
 				17BCE8D7201AD97D0083F5EC /* lomoMap.png in Resources */,
 				17BCE8FF201AD97D0083F5EC /* softLight.png in Resources */,
 				17BCE90A201AD97D0083F5EC /* 黑白.png in Resources */,
+				173ED7BC2043FA3B00D5B7CE /* IMG_0375.png in Resources */,
+				173ED7BA2043FA3B00D5B7CE /* IMG_0376.png in Resources */,
 				17BCE9E52021BF1A0083F5EC /* 吸血嘴唇.png in Resources */,
 				17BCE8F8201AD97D0083F5EC /* brannanContrast.png in Resources */,
 				17BCE90B201AD97D0083F5EC /* 鱼眼.png in Resources */,
@@ -1043,6 +1068,7 @@
 				17BCE8F1201AD97D0083F5EC /* toasterColorShift.png in Resources */,
 				17BCE8E3201AD97D0083F5EC /* earlybirdBlowout.png in Resources */,
 				17BCE99C201ADF2F0083F5EC /* default.png in Resources */,
+				173ED7BD2043FA3B00D5B7CE /* IMG_0379.png in Resources */,
 				17BCE905201AD97D0083F5EC /* 酒色.png in Resources */,
 				17BCE8F6201AD97D0083F5EC /* valenciaGradientMap.png in Resources */,
 				17BCE8EE201AD97D0083F5EC /* earlybirdMap.png in Resources */,
@@ -1066,12 +1092,14 @@
 				17BCE8DE201AD97D0083F5EC /* brannanLuma.png in Resources */,
 				17BCE8EB201AD97D0083F5EC /* hudsonBackground.png in Resources */,
 				17BCE90C201AD97D0083F5EC /* 复古.png in Resources */,
+				173ED7BB2043FA3B00D5B7CE /* IMG_0377.png in Resources */,
 				17BCE8CF201AD97D0083F5EC /* fullViewFilters.plist in Resources */,
 				17BCE8E8201AD97D0083F5EC /* hefeMap.png in Resources */,
 				17BCE8E2201AD97D0083F5EC /* riseMap.png in Resources */,
 				17BCE8D5201AD97D0083F5EC /* sutroEdgeBurn.png in Resources */,
 				17BCE8D6201AD97D0083F5EC /* nashvilleMap.png in Resources */,
 				17BCE909201AD97D0083F5EC /* 海上夜色.png in Resources */,
+				173ED7BE2043FA3B00D5B7CE /* IMG_0378.png in Resources */,
 				17BCE8F0201AD97D0083F5EC /* brannanScreen.png in Resources */,
 				17BCE8E1201AD97D0083F5EC /* valenciaMap.png in Resources */,
 				17BCE913201AD97D0083F5EC /* SBRecorder.bundle in Resources */,
