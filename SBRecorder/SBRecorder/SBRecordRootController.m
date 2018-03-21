@@ -323,7 +323,8 @@ static dispatch_queue_t _autotrimQueue;
     [self _remuseTimer];
 }
 - (void)stopRecord {
-    [_filterConfig.filterGroup removeTarget:_movieWriter];
+    // ＃1 issue 最大时长录制崩溃  原因错误的移除输出链
+    [_filterConfig.terminalFilter removeTarget:_movieWriter];
     _videoCamera.audioEncodingTarget = nil;
     __weak typeof(self) weak = self;
     [_movieWriter finishRecordingWithCompletionHandler:^{
