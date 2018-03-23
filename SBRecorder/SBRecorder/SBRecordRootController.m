@@ -43,6 +43,7 @@ static dispatch_queue_t _autotrimQueue;
     NSTimer *_timer;
     CGSize _writerSize;
     NSTimeInterval _delayPush;
+    BOOL _didStopRecord;
 }
 + (void)initialize{
     const char *queueLabel = "com.sb.record.trimFiles";
@@ -52,6 +53,7 @@ static dispatch_queue_t _autotrimQueue;
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor colorWithWhite:0.25 alpha:0.5];
     self.navigationController.navigationBarHidden = YES;
+    _didStopRecord = YES;
     self.faceParse = [FaceParseTool shareFaceParse];
     [self initializeUI];
     [self configurationRecorder];
@@ -255,9 +257,10 @@ static dispatch_queue_t _autotrimQueue;
     float progress = _duration/_maxDuration;
     [self _setRecordProgress:progress];
     [self _setRecordDuration:_duration];
-    if (autoFinish) {
+    if (autoFinish && !_didStopRecord) {
         _delayPush = 0.5f;
         [self stopRecord];
+        [self showOtherControl];
     }
 }
 - (void)_removeTimer{
@@ -323,6 +326,7 @@ static dispatch_queue_t _autotrimQueue;
     [self _remuseTimer];
 }
 - (void)stopRecord {
+    _didStopRecord = YES;//标记已经停止录制
     // ＃1 issue 最大时长录制崩溃  原因错误的移除输出链
     [_filterConfig.terminalFilter removeTarget:_movieWriter];
     _videoCamera.audioEncodingTarget = nil;
@@ -352,6 +356,7 @@ static dispatch_queue_t _autotrimQueue;
     [_movieWriter startRecording];
     //初始化计时器
     [self _setupTimer];
+    _didStopRecord = NO;//标记已经停止录制
 }
 - (void)playVideo{
     dispatch_time_t stopTime = dispatch_time(DISPATCH_TIME_NOW, (_delayPush) * NSEC_PER_SEC);
@@ -378,8 +383,10 @@ static dispatch_queue_t _autotrimQueue;
     [self hideOtherControl];
 }
 - (void)endLongPressRecordButton:(SBRecordButton *)recordButton{
-    [self stopRecord];
-    [self showOtherControl];
+    if (!_didStopRecord) {
+        [self stopRecord];
+        [self showOtherControl];
+    }
 }
 - (void)cancleOrFailureLongPressRecordButton:(SBRecordButton *)recordButton{
     [self _removeTimer];
